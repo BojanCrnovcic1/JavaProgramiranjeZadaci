@@ -65,4 +65,11 @@ public class Account {
         balance += iznos;
     }
 
+    @Override
+    public String toString() {
+        return "ID : " + id +
+                "\nBalance : " + balance +
+                "\nGodisnja kamatna stopa : " + godisnjaKamatnaStopa +
+                "\nVrijeme kreiranja racuna : " + getDateCreated();
+    }
 }
