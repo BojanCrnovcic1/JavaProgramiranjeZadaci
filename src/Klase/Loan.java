@@ -22,15 +22,26 @@ public class Loan {
         vrijemePozajmice = new Date();
     }
 
-    public void setGodisnjaKamatnaStopa(double godisnjaKamatnaStopa) {
+    public void setGodisnjaKamatnaStopa(double godisnjaKamatnaStopa) throws IllegalArgumentException {
+        if (godisnjaKamatnaStopa <= 0) {
+            throw new IllegalArgumentException
+                    ("Godisnja kamatna stopa ne moze da bude jednaka ili manja od 0.");
+        }
+
         this.godisnjaKamatnaStopa = godisnjaKamatnaStopa;
     }
 
-    public void setGodina(int godina) {
+    public void setGodina(int godina) throws IllegalArgumentException {
+            if (godina <= 0) {
+                throw new IllegalArgumentException("Godine ne mogu da budu jendake ili manje od 0. ");
+        }
         this.godina = godina;
     }
 
-    public void setIznosPozajmice(double iznosPozajmice) {
+    public void setIznosPozajmice(double iznosPozajmice) throws IllegalArgumentException {
+        if (iznosPozajmice <= 0) {
+            throw new IllegalArgumentException("Iznos pozajmice ne moze da bude jednak ili manji od 0. ");
+        }
         this.iznosPozajmice = iznosPozajmice;
     }
 
