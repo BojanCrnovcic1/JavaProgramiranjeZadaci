@@ -1,6 +1,6 @@
 package Klase;
 
-public class GeometricObject {
+public abstract class GeometricObject {
     private String boja;
     private boolean ispunjen;
 
@@ -28,6 +28,9 @@ public class GeometricObject {
     public void setIspunjen(boolean ispunjen) {
         this.ispunjen = ispunjen;
     }
+
+    public abstract double getPerimeter();
+    public abstract double getArea();
 
     @Override
     public String toString() {
